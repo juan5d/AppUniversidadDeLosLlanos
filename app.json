@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "UnillanosApp",
+    "slug": "UnillanosApp",
+    "version": "2.1.8",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSExceptionDomains": {
+            "example.com": {
+              "NSIncludesSubdomains": true,
+              "NSTemporaryExceptionAllowsInsecureHTTPLoads": true,
+              "NSTemporaryExceptionMinimumTLSVersion": "TLSv1.1"
+            }
+          }
+        }
+      },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.unillanos.unillanosapp"
+    },
+    "android": {
+      "package": "com.unillanos.unillanosapp",
+      "versionCode": "9",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "signatureType": "both",
+        "keystore": {
+          "keystorePath": "./new.keystore",
+          "keystorePassword": "*******",
+          "keyAlias": "*********",
+          "keyPassword": "************"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "jsEngine": "hermes",
+    "extra": {
+      "eas": {
+        "projectId": "***************"
+      }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ]
+  }
+}
